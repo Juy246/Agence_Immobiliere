@@ -101,8 +101,4 @@ public class BienImmobilier {
                 "\nPour une surface habitable de : " + numberFormat.format(surfaceHabitable())
                 + " m2 et une surface non habitable de : " + numberFormat.format(surfaceNonHabitable()) + " m2.";
     }
-
-
-
-
 }

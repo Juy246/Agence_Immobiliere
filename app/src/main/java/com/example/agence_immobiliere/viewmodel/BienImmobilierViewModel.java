@@ -17,6 +17,7 @@ import jakarta.inject.Inject;
 public class BienImmobilierViewModel extends ViewModel {
     private final BienImmobilierRepository repo;
     private final MutableLiveData<List<BienImmobilier>> biens = new MutableLiveData<>();
+    private final MutableLiveData<BienImmobilier> bienImmobilierDetail = new MutableLiveData<>();
 
     @Inject
     public BienImmobilierViewModel(BienImmobilierRepository repo) {
@@ -38,5 +39,19 @@ public class BienImmobilierViewModel extends ViewModel {
             }
             return null;
         });
+    }
+
+    public LiveData<BienImmobilier> getBienImmobilierDetail() {
+        return bienImmobilierDetail;
+    }
+
+
+
+    public boolean creerBien(String type, String rue, String ville, String codePostal) {
+        boolean ok = repo.creerBien(type, rue, ville, codePostal);
+        if (ok) {
+            biens.setValue(repo.getBiens());
+        }
+        return ok;
     }
 }

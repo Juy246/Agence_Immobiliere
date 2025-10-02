@@ -46,4 +46,20 @@ public class BienImmobilierRepository {
         }
         return false;
     }
+
+    public boolean creerBien(String type, String rue, String ville, String codePostal) {
+        if (
+                type == null || type.isEmpty() ||
+                rue == null || rue.isEmpty() ||
+                ville == null || ville.isEmpty() ||
+                codePostal == null || codePostal.isEmpty()) {
+            return false;
+        }
+
+        BienImmobilier bien = new BienImmobilier(type, rue, ville, codePostal);
+        ajouterBien(bien); // méthode du repository
+        return true;
+    }
+
+
 }
