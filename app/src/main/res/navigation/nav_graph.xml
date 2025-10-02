@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/bienListFragment">
+
+    <fragment
+        android:id="@+id/bienListFragment"
+        android:name="com.example.agence_immobiliere.ui.BienImmobilier.BienListFragment"
+        android:label="fragment_bien_list"
+        tools:layout="@layout/fragment_bien_list" >
+        <action
+            android:id="@+id/action_bienListFragment_to_bienDetailFragment"
+            app:destination="@id/bienDetailFragment" />
+        <action
+            android:id="@+id/action_bienListFragment_to_bienCreateFragement"
+            app:destination="@id/bienCreateFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/bienDetailFragment"
+        android:name="com.example.agence_immobiliere.ui.BienImmobilier.BienDetailFragment"
+        android:label="fragment_bien_detail"
+        tools:layout="@layout/fragment_bien_detail" >
+        <action
+            android:id="@+id/action_bienDetailFragment_to_bienAddPieceFragment"
+            app:destination="@id/bienAddPieceFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/bienCreateFragment"
+        android:name="com.example.agence_immobiliere.ui.BienImmobilier.BienCreateFragment"
+        android:label="fragment_bien_create_fragement"
+        tools:layout="@layout/fragment_bien_create_fragment" />
+    <fragment
+        android:id="@+id/bienAddPieceFragment"
+        android:name="com.example.agence_immobiliere.ui.BienImmobilier.BienAddPieceFragment"
+        android:label="fragment_bien_add_piece"
+        tools:layout="@layout/fragment_bien_add_piece" />
+</navigation>
