@@ -84,11 +84,11 @@ public class BienImmobilier {
     }
 
     public String toStringPieces() {
-        StringBuilder sb = new StringBuilder();
-        for (Piece p : pieces) {
-            sb.append(p.toString());
+        String resultat = "";
+        for (Piece unePiece : pieces) {
+            resultat += unePiece.toString();
         }
-        return sb.toString();
+        return resultat;
     }
 
     @Override
