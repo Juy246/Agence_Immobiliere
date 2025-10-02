@@ -25,12 +25,20 @@
         <action
             android:id="@+id/action_bienDetailFragment_to_bienAddPieceFragment"
             app:destination="@id/bienAddPieceFragment" />
+        <argument
+            android:name="bienId"
+            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/bienCreateFragment"
         android:name="com.example.agence_immobiliere.ui.BienImmobilier.BienCreateFragment"
         android:label="fragment_bien_create_fragment"
-        tools:layout="@layout/fragment_bien_create_fragment" />
+        tools:layout="@layout/fragment_bien_create_fragment" >
+        <argument
+            android:name="bienId"
+            app:argType="string" />
+    </fragment>
+
     <fragment
         android:id="@+id/bienAddPieceFragment"
         android:name="com.example.agence_immobiliere.ui.BienImmobilier.BienAddPieceFragment"
