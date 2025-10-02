@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.BienImmobilier.BienCreateFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Titre -->
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nouveau Bien"
+            android:background="#009688"
+            android:gravity="center"
+            android:textColor="#FBFBFB"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+
+        <!-- Formulaire création de contact -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/etRue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Rue" />
+
+            <EditText
+                android:id="@+id/etVille"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Ville" />
+
+            <EditText
+                android:id="@+id/etCodePostale"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Code Postale" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnCreateBien"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Créer le nouveau bien" />
+
+</FrameLayout>

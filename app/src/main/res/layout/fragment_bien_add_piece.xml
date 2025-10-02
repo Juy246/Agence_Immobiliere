@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.BienImmobilier.BienAddPieceFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#009688"
+            android:gravity="center"
+            android:text="Ajouter une pièce"
+            android:textColor="#FBFBFB"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Type de pièce: "
+                android:textSize="15dp"/>
+
+            <Spinner
+                android:id="@+id/spinnerTypePiece"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#009688"
+                android:gravity="center"
+                android:text="Pièce quadrilatère"
+                android:textColor="#FBFBFB"
+                android:textSize="20sp" />
+            <EditText
+                android:id="@+id/etLongueur"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Longueur" />
+
+            <EditText
+                android:id="@+id/etLargeur"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Largeur" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnCreatePiece"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Créer la pièce"
+        android:layout_gravity="center"/>
+</FrameLayout>
