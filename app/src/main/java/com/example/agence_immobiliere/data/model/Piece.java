@@ -1,5 +1,8 @@
 package com.example.agence_immobiliere.data.model;
 
+import java.text.DecimalFormat;
+import java.text.DecimalFormatSymbols;
+
 public abstract class Piece {
     private TypePiece typePiece;
     private String niveau;
@@ -28,7 +31,8 @@ public abstract class Piece {
 
     @Override
     public String toString() {
-        return "- " + typePiece.getNom() + " surface : " + String.format("%.2f", surface()) + " m2";
+        DecimalFormat numberFormat = new DecimalFormat("#.00");
+        return "- " + typePiece.getNom() + " surface : " + numberFormat.format(surface()) + " m2\n";
     }
 
     public boolean isSurfaceHabitable() {
