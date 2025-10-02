@@ -14,7 +14,7 @@
             android:id="@+id/action_bienListFragment_to_bienDetailFragment"
             app:destination="@id/bienDetailFragment" />
         <action
-            android:id="@+id/action_bienListFragment_to_bienCreateFragement"
+            android:id="@+id/action_bienListFragment_to_bienCreateFragment"
             app:destination="@id/bienCreateFragment" />
     </fragment>
     <fragment
@@ -29,7 +29,7 @@
     <fragment
         android:id="@+id/bienCreateFragment"
         android:name="com.example.agence_immobiliere.ui.BienImmobilier.BienCreateFragment"
-        android:label="fragment_bien_create_fragement"
+        android:label="fragment_bien_create_fragment"
         tools:layout="@layout/fragment_bien_create_fragment" />
     <fragment
         android:id="@+id/bienAddPieceFragment"
